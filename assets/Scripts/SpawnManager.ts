@@ -13,7 +13,6 @@ export class SpawnManager extends Component {
     @property(Node)
     canvas:Node;
 
-
     startPosX:number=-400;
     startPosY:number=300;
 
@@ -22,10 +21,6 @@ export class SpawnManager extends Component {
 
     start() {
         this.spawn();
-    }
-
-    update(deltaTime: number) {
-        
     }
 
     spawn(){

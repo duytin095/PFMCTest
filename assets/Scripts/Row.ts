@@ -12,23 +12,14 @@ export class Row extends Component {
         this.node.on(Node.EventType.TOUCH_MOVE, this.dragMoveNode.bind(this), this);
     }
 
-    update(deltaTime: number) {
-        
-    }
-
-
     dragMoveNode (e: EventTouch) {
-
-
         var touchLocation = e.getUILocation();
         var nodeWorldPos = new Vec3(touchLocation.x, touchLocation.y, 0);
-
         var nodePos = this.node.getComponent(UITransform).convertToNodeSpaceAR(nodeWorldPos);
 
         this.isTouching = true;
         this.currentPosX = nodePos.x;
         this.currentPosY = nodePos.y;
-        console.log(this.currentPosX);
         
 
     }
